@@ -13,6 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import igor.leite.coroutinesnotes.databinding.FragmentHomeBinding
 import igor.leite.coroutinesnotes.ui.viewmodel.HomeViewModel
 import igor.leite.coroutinesnotes.utils.RequestState
+import igor.leite.coroutinesnotes.utils.extensions.loadImage
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
@@ -46,6 +47,7 @@ class HomeFragment : Fragment() {
                     with(binding) {
                         tvCardName.text = it.value.name
                         tvCardType.text = it.value.type
+                        ivCardImage.loadImage(it.value.imageUrl)
                     }
                 }
                 is RequestState.ResponseFailure -> {

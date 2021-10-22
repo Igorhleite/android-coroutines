@@ -1,6 +1,7 @@
-package igor.leite.coroutinesnotes.utils.extentions
+package igor.leite.coroutinesnotes.utils.extensions
 
 import igor.leite.coroutinesnotes.utils.RequestState
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.Response
@@ -8,7 +9,8 @@ import retrofit2.Response
 fun <T : Any> Response<T>.safeAwait(): Flow<RequestState<T>> = flow {
     this@safeAwait.run {
         emit(RequestState.Loading(true))
-        kotlinx.coroutines.delay(2000)
+        /** This is to simulate the delay in the request. **/
+        delay(timeMillis = 2000)
         try {
             if (isSuccessful) {
                 body()?.let { body ->

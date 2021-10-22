@@ -3,8 +3,8 @@ package igor.leite.coroutinesnotes.data.repository
 import igor.leite.coroutinesnotes.data.ApiClient
 import igor.leite.coroutinesnotes.data.model.Card
 import igor.leite.coroutinesnotes.utils.RequestState
-import igor.leite.coroutinesnotes.utils.extentions.fromDomainToCard
-import igor.leite.coroutinesnotes.utils.extentions.safeAwait
+import igor.leite.coroutinesnotes.utils.extensions.fromDomainToCard
+import igor.leite.coroutinesnotes.utils.extensions.safeAwait
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject

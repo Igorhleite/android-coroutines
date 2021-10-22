@@ -1,4 +1,4 @@
-package igor.leite.coroutinesnotes.utils.extentions
+package igor.leite.coroutinesnotes.utils.extensions
 
 import igor.leite.coroutinesnotes.data.model.Card
 import igor.leite.coroutinesnotes.data.model.dto.CardModel
